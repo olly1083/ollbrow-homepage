@@ -18,7 +18,7 @@ class Browser(QMainWindow):
 
         self.browser = WebEnginePage()
         # Set the home page to the GitHub Pages URL
-        self.browser.setUrl(QUrl("https://olly1083.github.io/ollbrow/home.html"))
+        self.browser.setUrl(QUrl("https://olly1083.github.io/ollbrow-homepage/home.html"))
 
         self.setCentralWidget(self.browser)
         self.showMaximized()
@@ -51,7 +51,7 @@ class Browser(QMainWindow):
 
     def navigate_home(self):
         # Navigate to the GitHub Pages URL
-        self.browser.setUrl(QUrl("https://olly1083.github.io/ollbrow/home.html"))
+        self.browser.setUrl(QUrl("https://olly1083.github.io/ollbrow-homepage/home.html"))
 
     def navigate_to_url(self):
         url = self.url_bar.text()
