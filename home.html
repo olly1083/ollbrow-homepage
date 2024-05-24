@@ -18,12 +18,6 @@
             width: 200px;
             margin-bottom: 20px;
         }
-        .title {
-            font-size: 36px;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 20px;
-        }
         .search-bar {
             margin-top: 20px;
         }
@@ -47,25 +41,13 @@
     </style>
 </head>
 <body>
-    <div class="title">OLLBROW</div>
+    <!-- Replace 'logo.png' with the path to your image file -->
+    <img src="logo.png" alt="OLLBROW Logo" class="logo">
     <div class="search-bar">
-        <!-- Changed the form action to empty string and added an id -->
-        <form id="search-form" action="">
-            <input type="text" id="search-input" placeholder="Search the web...">
+        <form action="https://www.google.com/search" method="get" target="_self">
+            <input type="text" name="q" placeholder="Search the web...">
             <input type="submit" value="Search">
         </form>
     </div>
-    <script>
-        document.getElementById('search-form').addEventListener('submit', function(event) {
-            // Prevent form submission
-            event.preventDefault();
-            // Get the search query
-            const query = document.getElementById('search-input').value;
-            // Construct the search URL
-            const url = 'ollbrow:google.com/search?q=' + encodeURIComponent(query);
-            // Open the URL in the same window
-            window.location.href = url;
-        });
-    </script>
 </body>
 </html>
