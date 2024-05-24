@@ -49,16 +49,21 @@
 <body>
     <div class="title">OLLBROW</div>
     <div class="search-bar">
-        <form id="search-form">
+        <!-- Changed the form action to empty string and added an id -->
+        <form id="search-form" action="">
             <input type="text" id="search-input" placeholder="Search the web...">
             <input type="submit" value="Search">
         </form>
     </div>
     <script>
         document.getElementById('search-form').addEventListener('submit', function(event) {
+            // Prevent form submission
             event.preventDefault();
+            // Get the search query
             const query = document.getElementById('search-input').value;
+            // Construct the search URL
             const url = 'ollbrow:google.com/search?q=' + encodeURIComponent(query);
+            // Open the URL in the same window
             window.location.href = url;
         });
     </script>
